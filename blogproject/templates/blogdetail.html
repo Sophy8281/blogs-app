@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+
+{% block title %} Blog {% endblock %}
+
+{% block content %}
+    <h3>{{blogobject.title}}</h3>
+<p>Published on: <b>{{blogobject.Published_date}}</b></p>
+    <p>Category: {{blogobject.category.title}}</p>
+    <img src="{{ blogobject.image.url }}" width="300">
+    <p>{{blogobject.content}}</p>
+    <hr>
+    <p>Author: {{blogobject.author}}</p>
+{% endblock %}

@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+
+{% block title %} Blog {% endblock %}
+
+{% block content %}
+    <h3>All the  Blogs</h3>
+ {% for blog in allblogs%}
+<li><a href="/blogs/{{blog.id}}/detail/">{{blog.title}}</a></li>
+    <p>Posted on: {{blog.Published_date}}</p>
+    <a style="font-size:15px;" href="/blogs/{{blog.id}}/update/">Update</a>
+    <a style="font-size:15px;" href="/blogs/{{blog.id}}/delete/">Delete</a>
+    {% endfor %}
+{% endblock %}
